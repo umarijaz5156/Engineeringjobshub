@@ -21,9 +21,16 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="createWaterLandCompany" name="createWaterLandCompany">
-                                    <label class="form-check-label font-bold" for="createWaterLandCompany">
+                                    <input class="form-check-input" type="checkbox" id="CouncilDirectCompany" name="CouncilDirectCompany">
+                                    <label class="form-check-label font-bold" for="CouncilDirectCompany">
                                        <b> Create company to the Council Direct site</b>
+                                    </label>
+                                </div>
+                               
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="WaterLandCompany" name="WaterLandCompany">
+                                    <label class="form-check-label font-bold" for="WaterLandCompany">
+                                       <b> Create company to the Water Land site</b>
                                     </label>
                                 </div>
                             </div>
