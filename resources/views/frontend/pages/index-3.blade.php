@@ -136,7 +136,7 @@
     @endif
     <!-- google adsense area end -->
     <!-- category section -->
-    <section class="tw-bg-primary-50 md:tw-py-20 tw-py-12">
+    {{-- <section class="tw-bg-primary-50 md:tw-py-20 tw-py-12">
         <div class="container">
             <div>
                 <h2>{{ __('top_categories') }}</h2>
@@ -165,7 +165,7 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
         <!-- top companaies -->
