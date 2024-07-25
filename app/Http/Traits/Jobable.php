@@ -166,22 +166,22 @@ trait JobAble
         }
 
         // country
-        $selected_country = session()->get('selected_country');
+        // $selected_country = session()->get('selected_country');
 
-        if ($selected_country && $selected_country != null) {
-            $country = selected_country()->name;
-            $query->where('country', 'LIKE', "%$country%");
-        } else {
-            $setting = loadSetting();
-            if ($setting->app_country_type == 'single_base') {
-                if ($setting->app_country) {
-                    $country = Country::where('id', $setting->app_country)->first();
-                    if ($country) {
-                        $query->where('country', 'LIKE', "%$country->name%");
-                    }
-                }
-            }
-        }
+        // if ($selected_country && $selected_country != null) {
+        //     $country = selected_country()->name;
+        //     $query->where('country', 'LIKE', "%$country%");
+        // } else {
+        //     $setting = loadSetting();
+        //     if ($setting->app_country_type == 'single_base') {
+        //         if ($setting->app_country) {
+        //             $country = Country::where('id', $setting->app_country)->first();
+        //             if ($country) {
+        //                 $query->where('country', 'LIKE', "%$country->name%");
+        //             }
+        //         }
+        //     }
+        // }
 
         // Sort by ads
         if ($request->has('sort_by') && $request->sort_by != null) {
@@ -337,23 +337,23 @@ trait JobAble
 
        
         // country
-        $selected_country = session()->get('selected_country');
-        if ($selected_country && $selected_country != null) {
-            $country = selected_country()->name;
-            $query->where('country', 'LIKE', "%$country%");
-        } else {
+        // $selected_country = session()->get('selected_country');
+        // if ($selected_country && $selected_country != null) {
+        //     $country = selected_country()->name;
+        //     $query->where('country', 'LIKE', "%$country%");
+        // } else {
            
 
-            $setting = loadSetting();
-            if ($setting->app_country_type == 'single_base') {
-                if ($setting->app_country) {
-                    $country = Country::where('id', $setting->app_country)->first();
-                    if ($country) {
-                        $query->where('country', 'LIKE', "%$country->name%");
-                    }
-                }
-            }
-        }
+        //     $setting = loadSetting();
+        //     if ($setting->app_country_type == 'single_base') {
+        //         if ($setting->app_country) {
+        //             $country = Country::where('id', $setting->app_country)->first();
+        //             if ($country) {
+        //                 $query->where('country', 'LIKE', "%$country->name%");
+        //             }
+        //         }
+        //     }
+        // }
     
 
         // Sort by ads
@@ -491,12 +491,12 @@ trait JobAble
                     }
                 }
             } else {
-                $selected_country = session()->get('selected_country');
+                // $selected_country = session()->get('selected_country');
 
-                if ($selected_country && $selected_country != null) {
-                    $country = selected_country()->name;
-                    $related_jobs_query->where('country', 'LIKE', "%$country%");
-                }
+                // if ($selected_country && $selected_country != null) {
+                //     $country = selected_country()->name;
+                //     $related_jobs_query->where('country', 'LIKE', "%$country%");
+                // }
             }
             $related_jobs = $related_jobs_query
                 ->latest()
@@ -535,12 +535,12 @@ trait JobAble
                     }
                 }
             } else {
-                $selected_country = session()->get('selected_country');
+                // $selected_country = session()->get('selected_country');
 
-                if ($selected_country && $selected_country != null) {
-                    $country = selected_country()->name;
-                    $related_jobs_query->where('country', 'LIKE', "%$country%");
-                }
+                // if ($selected_country && $selected_country != null) {
+                //     $country = selected_country()->name;
+                //     $related_jobs_query->where('country', 'LIKE', "%$country%");
+                // }
             }
             $related_jobs = $related_jobs_query
                 ->latest()
