@@ -680,7 +680,7 @@
                         <div class="section pt-3" id="description">
                             <div class="card mb-0">
                                 <div class="card-header">
-                                    <div class="card-title">{{ __('Council Direct site Approval') }}</div>
+                                    <div class="card-title">{{ __('Sites Approval') }}</div>
                                 </div>
                                 <div class="card-body">
                                     <div class="col-sm-12 form-group">
@@ -690,6 +690,24 @@
                                                 <input type="hidden" name="ispost_councilDirect" value="false">
                                                 <input value="true" name="ispost_councilDirect" type="checkbox" class="form-check-input" id="">
                                                 <label class="form-check-label mr-5" for="">{{ __('Post job at councilDirect site?') }}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 form-group">
+                                        <div class="form-check">
+                                            <div class="d-inline">
+                                                <input type="hidden" name="ispost_waterland" value="false">
+                                                <input value="true" name="ispost_waterland" type="checkbox" class="form-check-input" id="">
+                                                <label class="form-check-label mr-5" for="">{{ __('Post job at Water Land site?') }}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 form-group">
+                                        <div class="form-check">
+                                            <div class="d-inline">
+                                                <input type="hidden" name="ispost_planningjobs" value="false">
+                                                <input value="true" name="ispost_planningjobs" type="checkbox" class="form-check-input" id="">
+                                                <label class="form-check-label mr-5" for="">{{ __('Post job at Planning Jobs Hub site?') }}</label>
                                             </div>
                                         </div>
                                     </div>

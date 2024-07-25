@@ -135,9 +135,18 @@
                                 <span>{{ __('select_all') }}</span>
                             </label>
                             <button id="delete-selected" class="btn btn-danger ml-3">{{ __('selected_delete') }}</button>
-                            <button id="land-water-button" class="btn btn-primary ml-3">
-                                <span id="button-text">{{ __('Land & Water') }}</span>
+                        
+                            <button id="council-direct" class="btn btn-primary ml-3">
+                                <span id="button-text">{{ __('Council Direct') }}</span>
                                 <span id="button-loader" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                            </button>
+                            <button id="land-water" class="btn btn-primary ml-3">
+                                <span id="button-text-1">{{ __('Land & Water') }}</span>
+                                <span id="button-loader-1" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                            </button>
+                            <button id="planningjobs" class="btn btn-primary ml-3">
+                                <span id="button-text-2">{{ __('Planning Jobs') }}</span>
+                                <span id="button-loader-2" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                             </button>
                         </div>
                     </div>
@@ -488,8 +497,8 @@
                 });
 
 
-                   // land and water site submit
-                   $('#land-water-button').click(function() {
+                 // Council Direct site submit
+                $('#council-direct').click(function() {
                         var $button = $(this);
                         var $buttonText = $button.find('#button-text');
                         var $buttonLoader = $button.find('#button-loader');
@@ -514,7 +523,7 @@
                         },
                         success: function(response) {
 
-                            showSuccessMessage('Job Posted on the Water land Site successfully');
+                            showSuccessMessage('Job Posted on the Council Direct Site successfully');
                              // Hide the loader and show the text again
                              $buttonLoader.addClass('d-none');
                             $buttonText.removeClass('d-none');
@@ -527,11 +536,92 @@
                             console.error(error);
                         }
                     });
+                });
 
-                       
+                 
+                   // water land
+                $('#land-water').click(function() {
+                        var $button = $(this);
+                        var $buttonText = $button.find('#button-text-1');
+                        var $buttonLoader = $button.find('#button-loader-1');
+
+                        // Show the loader and hide the text
+                        $buttonText.addClass('d-none');
+                        $buttonLoader.removeClass('d-none');
+
+                        var selectedJobsE = [];
+                    $('.job-checkbox:checked').each(function() {
+                        selectedJobsE.push($(this).val());
+                    });
+
+                    function showSuccessMessage(message) {
+                        toastr.success(message);
+                    }
+                    // AJAX request to delete selected jobs
+                    $.ajax({
+                        url: '{{ route('jobs.engineeringjobshub') }}',
+                        data: {
+                            ids: selectedJobsE
+                        },
+                        success: function(response) {
+
+                            showSuccessMessage('Job Posted on the Land Water Site successfully');
+                             // Hide the loader and show the text again
+                             $buttonLoader.addClass('d-none');
+                            $buttonText.removeClass('d-none');
+                            setTimeout(function() {
+                                window.location.reload()
+
+                        }, 2000);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
                  });
-            });
+                 
+                 // planning jobs
+                 $('#planningjobs').click(function() {
+                        var $button = $(this);
+                        var $buttonText = $button.find('#button-text-2');
+                        var $buttonLoader = $button.find('#button-loader-2');
 
+                        // Show the loader and hide the text
+                        $buttonText.addClass('d-none');
+                        $buttonLoader.removeClass('d-none');
+
+                        var selectedJobsE = [];
+                    $('.job-checkbox:checked').each(function() {
+                        selectedJobsE.push($(this).val());
+                    });
+
+                    function showSuccessMessage(message) {
+                        toastr.success(message);
+                    }
+                    // AJAX request to delete selected jobs
+                    $.ajax({
+                        url: '{{ route('jobs.planningjobs') }}',
+                        data: {
+                            ids: selectedJobsE
+                        },
+                        success: function(response) {
+
+                            showSuccessMessage('Job Posted on the Planning job Site successfully');
+                             // Hide the loader and show the text again
+                             $buttonLoader.addClass('d-none');
+                            $buttonText.removeClass('d-none');
+                            setTimeout(function() {
+                                window.location.reload()
+
+                        }, 2000);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                });
+
+        
         });
     </script>
 @endsection
