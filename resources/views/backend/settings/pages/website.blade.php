@@ -55,7 +55,7 @@
                                     <div class="row">
                                         <input type="file" class="form-control dropify"
                                             data-default-file="{{ asset($setting->loader_image) }}" name="loader_image"
-                                            data-allowed-file-extensions="jpg png jpeg gif"
+                                            data-allowed-file-extensions="jpg png jpeg gif webp"
                                             accept="image/png, image/jpg, image/jpeg, image/gif">
                                     </div>
                                 </div>

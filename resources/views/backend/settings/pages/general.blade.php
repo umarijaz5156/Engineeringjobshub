@@ -53,7 +53,7 @@
                                 </x-forms.label>
                                 <input type="file" class="form-control dropify"
                                     data-default-file="{{ $setting->dark_logo_url }}" name="dark_logo"
-                                    data-allowed-file-extensions='["jpg", "jpeg","png","svg"]'
+                                    data-allowed-file-extensions='["jpg", "jpeg","png","svg","webp"]'
                                     accept="image/png, image/jpg,image/svg image/jpeg" data-max-file-size="3M">
                                 @error('dark_logo')
                                     <span class="invalid-feedback d-block" role="alert">{{ __($message) }}</span>
@@ -65,7 +65,7 @@
                                 </x-forms.label>
                                 <input type="file" class="form-control dropify"
                                     data-default-file="{{ $setting->light_logo_url }}" name="light_logo"
-                                    data-allowed-file-extensions='["jpg", "jpeg","png","svg"]'
+                                    data-allowed-file-extensions='["jpg", "jpeg","png","svg","webp"]'
                                     accept="image/png, image/jpg,image/svg image/jpeg" data-max-file-size="3M">
                                 @error('light_logo_url')
                                     <span class="invalid-feedback d-block" role="alert">{{ __($message) }}</span>
@@ -77,7 +77,7 @@
                                 </x-forms.label>
                                 <input type="file" class="form-control dropify"
                                     data-default-file="{{ $setting->favicon_image_url }}" name="favicon_image"
-                                    data-allowed-file-extensions='["jpg", "jpeg","png","svg"]'
+                                    data-allowed-file-extensions='["jpg", "jpeg","png","svg","webp"]'
                                     accept="image/png, image/jpg,image/svg image/jpeg" data-max-file-size="1M">
                                 @error('favicon_image')
                                     <span class="invalid-feedback d-block" role="alert">{{ __($message) }}</span>
@@ -140,7 +140,7 @@
                                 </x-forms.label>
                                 <input type="file" class="form-control dropify"
                                     data-default-file="{{ $setting->app_pwa_icon_url }}" name="app_pwa_icon"
-                                    data-allowed-file-extensions='["jpg", "jpeg","png"]'
+                                    data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'
                                     accept="image/png, image/jpg, image/jpeg">
 
                                 <p class="img-size-note text-danger mt-2">{{ __('app_pwa_icon_size_note') }}</p>

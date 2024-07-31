@@ -112,7 +112,7 @@
                                     <div class="col-sm-10">
                                         <input type="file" class="form-control dropify"
                                         data-default-file="{{ asset($page->meta_image) }}" name="meta_image"
-                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'
+                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'
                                         accept="image/png, image/jpg, image/jpeg" data-max-file-size="3M">
                                         @error('meta_image')
                                             <span class="invalid-feedback" role="alert">{{ __($message) }}</span>
