@@ -89,7 +89,7 @@
                                                 <label>{{ __('banner_image') }}
                                                 </label>
                                                 <input name="home_page_banner_image"
-                                                    data-allowed-file-extensions="jpg png svg jpge"
+                                                    data-allowed-file-extensions="jpg png svg jpge webp"
                                                     data-min-width="250" type="file" class="form-control dropify"
                                                     data-default-file="{{ asset($cms_setting->home_page_banner_image) }}">
                                                 <x-forms.error name="home_page_banner_image" />
@@ -126,7 +126,7 @@
                                                         data-allowed-file-extensions='["jpg", "jpeg","png"]'> --}}
                                                     <input name="about_brand_logo" type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_brand_logo) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->about_brand_logo)
                                                         <a href="{{ route('settings.aboutLogo.delete','about_brand_logo') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -140,7 +140,7 @@
                                                     <input name="about_brand_logo1"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_brand_logo1) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->about_brand_logo1)
                                                         <a href="{{ route('settings.aboutLogo.delete','about_brand_logo1') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -154,7 +154,7 @@
                                                     <input name="about_brand_logo2"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_brand_logo2) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->about_brand_logo2)
                                                         <a href="{{ route('settings.aboutLogo.delete','about_brand_logo2') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -168,7 +168,7 @@
                                                     <input name="about_brand_logo3"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_brand_logo3) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->about_brand_logo3)
                                                         <a href="{{ route('settings.aboutLogo.delete','about_brand_logo3') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -182,7 +182,7 @@
                                                     <input name="about_brand_logo4"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_brand_logo4) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->about_brand_logo4)
                                                         <a href="{{ route('settings.aboutLogo.delete','about_brand_logo4') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -196,7 +196,7 @@
                                                     <input name="about_brand_logo5"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_brand_logo5) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->about_brand_logo5)
                                                         <a href="{{ route('settings.aboutLogo.delete','about_brand_logo5') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -217,7 +217,7 @@
                                                     <input name="about_banner_img"
                                                         data-min-width="250" type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_banner_img) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -225,7 +225,7 @@
                                                     <input name="about_banner_img1"
                                                         data-min-width="250" type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_banner_img1) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -233,7 +233,7 @@
                                                     <input name="about_banner_img2"
                                                         data-min-width="250" type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_banner_img2) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
@@ -241,7 +241,7 @@
                                                     <input name="about_banner_img3"
                                                         data-min-width="250" type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->about_banner_img3) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@
                                                 <input name="mission_image" type="file"
                                                     class="form-control dropify @error('mission_image') is-invalid @enderror"
                                                     data-default-file="{{ asset($cms_setting->mission_image) }}"
-                                                    data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                    data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                 <x-forms.error name="mission_image" />
                                             </div>
                                         </div>
@@ -873,7 +873,7 @@
                                                 <div class="card-body">
                                                     <input name="payment_logo1" type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->payment_logo1) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->payment_logo1)
                                                         <a href="{{ route('settings.paymentLogo.delete','payment_logo1') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -887,7 +887,7 @@
                                                     <input name="payment_logo2"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->payment_logo2) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->payment_logo2)
                                                         <a href="{{ route('settings.paymentLogo.delete','payment_logo2') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -901,7 +901,7 @@
                                                     <input name="payment_logo3"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->payment_logo3) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->payment_logo3)
                                                         <a href="{{ route('settings.paymentLogo.delete','payment_logo3') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -915,7 +915,7 @@
                                                     <input name="payment_logo4"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->payment_logo4) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->payment_logo4)
                                                         <a href="{{ route('settings.paymentLogo.delete','payment_logo4') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -929,7 +929,7 @@
                                                     <input name="payment_logo5"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->payment_logo5) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->payment_logo5)
                                                         <a href="{{ route('settings.paymentLogo.delete','payment_logo5') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
@@ -943,7 +943,7 @@
                                                     <input name="payment_logo6"
                                                         type="file" class="form-control dropify"
                                                         data-default-file="{{ asset($cms_setting->payment_logo6) }}"
-                                                        data-allowed-file-extensions='["jpg", "jpeg","png"]'>
+                                                        data-allowed-file-extensions='["jpg", "jpeg","png","webp"]'>
                                                         <p class="tw-text-gray-500 tw-text-xs tw-text-left mt-2 recommended-img-note mb-0">Recommended Image Size: 198x45</p>
                                                         @if ($cms_setting->payment_logo6)
                                                         <a href="{{ route('settings.aboutLogo.delete','payment_logo6') }}" onclick="return confirm('{{ __('are_you_sure') }}')" class="tw-underline">
