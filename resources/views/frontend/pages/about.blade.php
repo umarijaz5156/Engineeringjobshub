@@ -252,7 +252,7 @@
                     <div class="col-md-6">
                         <div>
                            
-                            <img src="{{ asset('home_page.png') }}" alt="image" class="w-100">
+                            <img src="{{ asset('home_page.webp') }}" alt="image" class="w-100">
                         </div>
                     </div>
                 </div>

@@ -23,16 +23,85 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Modules\Location\Entities\Country;
 
+use App\Models\User;
+use Illuminate\Pagination\LengthAwarePaginator;
+
 trait JobAble
 {
+    // protected function getJobs($request)
+    // {
+    //     $filteredJobs = $this->filterJobs($request)->latest();
+    //     $featured_jobs = $this->filterJobs($request)->latest()->where('featured', 1)->take(18)->get();
+    //     $jobs = $filteredJobs->paginate(18)->withQueryString();
+    //     return [
+    //         'total_jobs' => $jobs->total(),
+    //         'jobs' => $jobs,
+    //         'featured_jobs' => $featured_jobs,
+    //         'countries' => Country::all(['id', 'name', 'slug']),
+    //         'categories' => JobCategory::all()->sortBy('name'),
+    //         'job_roles' => JobRole::all()->sortBy('name'),
+    //         'max_salary' => \DB::table('jobs')->max('max_salary'),
+    //         'min_salary' => \DB::table('jobs')->max('min_salary'),
+    //         'experiences' => Experience::all(),
+    //         'educations' => Education::all(),
+    //         'job_types' => JobType::all(),
+    //         'skills' => Skill::all()->sortBy('name'),
+    //         'popularTags' => $this->popularTags(),
+    //     ];
+    // }
     protected function getJobs($request)
     {
-        $filteredJobs = $this->filterJobs($request)->latest();
+        // dd($request->all());
+        $filteredJobsQuery = $this->filterJobs($request)->latest();
         $featured_jobs = $this->filterJobs($request)->latest()->where('featured', 1)->take(18)->get();
-        $jobs = $filteredJobs->paginate(18)->withQueryString();
+
+        // Get the filtered jobs and convert them to a collection
+        $filteredJobsPaginated = $filteredJobsQuery->paginate(18)->withQueryString();
+        $filteredJobs = $filteredJobsPaginated->getCollection();
+
+        // Initialize an empty collection for user jobs
+        $userJobs = collect();
+
+        // Search for jobs by user name if a keyword is provided
+        if ($request->has('keyword') && $request->keyword != null) {
+            $keyword = $request->get('keyword');
+            $users = User::where('name', 'LIKE', "%$keyword%")->with('company.jobs')->get();
+
+            // Collect all jobs from the user search
+            foreach ($users as $user) {
+                if ($user->company) {
+                    $userJobs = $userJobs->merge($user->company->jobs);
+                }
+            }
+        }
+
+        // Merge the jobs from user search with the filtered jobs
+        $allJobs = $filteredJobs->merge($userJobs)->unique('id');
+        // Apply state_id filter if present in the request
+        
+        // dd($allJobs);
+
+        // Apply state_id filter if present in the request
+        if (isset($request->state_id)) {
+            $state_id = $request->state_id;
+            $allJobs = $allJobs->filter(function ($job) use ($state_id) {
+                return $job->state_id == $state_id;
+            });
+        }
+
+        // Paginate the merged collection manually
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 50;
+        $currentPageItems = $allJobs->slice(($currentPage - 1) * $perPage, $perPage)->values();
+
+        $paginatedJobs = new LengthAwarePaginator($currentPageItems, $allJobs->count(), $perPage, $currentPage, [
+            'path' => LengthAwarePaginator::resolveCurrentPath(),
+            'query' => $request->query(),
+        ]);
+
         return [
-            'total_jobs' => $jobs->total(),
-            'jobs' => $jobs,
+            'total_jobs' => $paginatedJobs->total(),
+            'jobs' => $paginatedJobs,
             'featured_jobs' => $featured_jobs,
             'countries' => Country::all(['id', 'name', 'slug']),
             'categories' => JobCategory::all()->sortBy('name'),

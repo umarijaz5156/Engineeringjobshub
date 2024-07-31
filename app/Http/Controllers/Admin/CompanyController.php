@@ -60,23 +60,23 @@ class CompanyController extends Controller
                 $endDate = Carbon::createFromFormat('d/m/Y', $endDate)->format('Y-m-d');
             }
     
-        $company = Company::with([
-            'jobs' => function ($query) use ($startDate, $endDate) {
-                $query->latest()->with('category', 'role', 'job_type', 'salary_type');
-                if ($startDate && $endDate) {
-                    $query->where(function ($q) use ($startDate, $endDate) {
-                        $q->whereBetween('created_at', [$startDate, $endDate])
-                          ->orWhereBetween('deadline', [$startDate, $endDate])
-                          ->orWhere(function ($q) use ($startDate) {
-                              $q->where('status', 'active')
-                                ->where('created_at', '<', $startDate);
-                          });
-                    });
-                }
-            },
-            'user.socialInfo',
-            'user.contactInfo'
-        ])->findOrFail($id);
+            $company = Company::with([
+                'jobs' => function ($query) use ($startDate, $endDate) {
+                    $query->latest('created_at')->with('category', 'role', 'job_type', 'salary_type');
+                    if ($startDate && $endDate) {
+                        $query->where(function ($q) use ($startDate, $endDate) {
+                            $q->whereBetween('created_at', [$startDate, $endDate])
+                              ->orWhereBetween('deadline', [$startDate, $endDate])
+                              ->orWhere(function ($q) use ($startDate) {
+                                  $q->where('status', 'active')
+                                    ->where('created_at', '<', $startDate);
+                              });
+                        });
+                    }
+                },
+                'user.socialInfo',
+                'user.contactInfo'
+            ])->findOrFail($id);
     
         return view('backend.company.report', compact('company', 'startDate', 'endDate'));
     }
@@ -90,7 +90,7 @@ class CompanyController extends Controller
         // $id = 254;
         $user = Company::with([
             'jobs' => function ($query) use ($startDate, $endDate) {
-                $query->latest()->with('category', 'role', 'job_type', 'salary_type');
+                $query->latest('created_at')->with('category', 'role', 'job_type', 'salary_type');
                 if ($startDate && $endDate) {
                     $query->where(function ($q) use ($startDate, $endDate) {
                         $q->whereBetween('created_at', [$startDate, $endDate])
@@ -106,6 +106,9 @@ class CompanyController extends Controller
             'user.contactInfo'
         ])->findOrFail($id);
 
+
+        $totalJobs = count($user->jobs) ?? 0;
+
         //     $company = $user;
         // return view('pdf.user-report', compact('company', 'startDate', 'endDate'));
 
@@ -113,7 +116,8 @@ class CompanyController extends Controller
          $pdf = PDF::loadView('pdf.user-report', [
             'company' => $user,
             'startDate' => $startDate,
-            'endDate' => $endDate
+            'endDate' => $endDate,
+            'totalJobs' => $totalJobs,
         ])->setPaper('a3', 'landscape')->output(); // Set paper size to A3 and orientation to landscape
     
 
