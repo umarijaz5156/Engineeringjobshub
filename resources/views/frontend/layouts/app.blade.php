@@ -7,7 +7,7 @@
     <meta name="description" content="@yield('description')">
     <meta property="og:image" content="@yield('og:image')">
     {{-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> --}}
-    <title>@yield('title') - {{ config('app.name') }}</title>
+    <title>@yield('title') </title>
 
     @yield('ld-data')
 
