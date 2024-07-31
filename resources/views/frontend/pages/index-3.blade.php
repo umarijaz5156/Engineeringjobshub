@@ -177,8 +177,8 @@
                     <div class="col-md-12 ">
                         <div class="" style="font-size: 1.2rem;">
                           <p>
-                            At Engineering Jobs Hub, we advertise on behalf of employers Australia wide by connecting to the best talent in the industry.                        </p>
-                        <p>
+                            At Engineering Jobs Hub, we advertise on behalf of employers for engineering jobs Australia wide by connecting to the best talent in the industry.
+                            <p>
                             We have a wide range of jobs available in Adelaide, Melbourne, Brisbane, Sydney, Perth Australia, Queensland, Tasmania, South Wales, Darwin, Victoria, Gold Coast, Regional Australia, South Australia, and Western Australia.
                         </p>
                            
