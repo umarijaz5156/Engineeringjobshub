@@ -62,7 +62,9 @@ class CompanyController extends Controller
     
             $company = Company::with([
                 'jobs' => function ($query) use ($startDate, $endDate) {
-                    $query->latest('created_at')->with('category', 'role', 'job_type', 'salary_type');
+                    $query->with('category', 'role', 'job_type', 'salary_type')
+                          ->ongoingFirst(); // Use the updated scope here
+            
                     if ($startDate && $endDate) {
                         $query->where(function ($q) use ($startDate, $endDate) {
                             $q->whereBetween('created_at', [$startDate, $endDate])
@@ -90,7 +92,9 @@ class CompanyController extends Controller
         // $id = 254;
         $user = Company::with([
             'jobs' => function ($query) use ($startDate, $endDate) {
-                $query->latest('created_at')->with('category', 'role', 'job_type', 'salary_type');
+                $query->with('category', 'role', 'job_type', 'salary_type')
+                      ->ongoingFirst(); // Use the updated scope here
+        
                 if ($startDate && $endDate) {
                     $query->where(function ($q) use ($startDate, $endDate) {
                         $q->whereBetween('created_at', [$startDate, $endDate])
