@@ -492,73 +492,73 @@
     </section>
 
 
-<section class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item border" style="border-color: #6894A7;">
-                <p class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="border-color: #6894A7; color: #6894A7;">
-                        <strong>Which engineering jobs are in demand in Australia?</strong>
-                    </button>
-                </p>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        There are many engineering jobs that are in demand in Australia, some of them are Civil engineering, Mechanical engineering, Biomedical engineering, Computer engineering, and Agriculture engineering.
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item border" style="border-color: #6894A7;">
+                    <p class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="border-color: #6894A7; color: #6894A7;">
+                            <strong>Which engineering jobs are in demand in Australia?</strong>
+                        </button>
+                    </p>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            There are many engineering jobs that are in demand in Australia, some of them are Civil engineering, Mechanical engineering, Biomedical engineering, Computer engineering, and Agriculture engineering.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item border" style="border-color: #6894A7;">
-                <p class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border-color: #6894A7; color: #6894A7;">
-                        <strong>Can I get an engineering job in Australia?</strong>
-                    </button>
-                </p>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Yes, You can get an engineering job in Australia because at this time a career in engineering is in high demand in Australia. 
+                <div class="accordion-item border" style="border-color: #6894A7;">
+                    <p class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border-color: #6894A7; color: #6894A7;">
+                            <strong>Can I get an engineering job in Australia?</strong>
+                        </button>
+                    </p>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, You can get an engineering job in Australia because at this time a career in engineering is in high demand in Australia. 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item border" style="border-color: #6894A7;">
-                <p class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="border-color: #6894A7; color: #6894A7;">
-                        <strong>How to find engineering jobs in Australia?</strong>
-                    </button>
-                </p>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        You can find the jobs at Engineering Jobs Hub in Australia and on any other job portal. You just need to fulfill the requirements for the relevant job.
+                <div class="accordion-item border" style="border-color: #6894A7;">
+                    <p class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="border-color: #6894A7; color: #6894A7;">
+                            <strong>How to find engineering jobs in Australia?</strong>
+                        </button>
+                    </p>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can find the jobs at Engineering Jobs Hub in Australia and on any other job portal. You just need to fulfill the requirements for the relevant job.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item border" style="border-color: #6894A7;">
-                <p class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="border-color: #6894A7; color: #6894A7;">
-                        <strong>Which engineering is highest paid in Australia?</strong>
-                    </button>
-                </p>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        There are multiple engineering jobs that are highest paid in Australia, some of them are Civil engineering, Mechanical engineering, Biomedical engineering, Computer engineering, Aerospace engineering, and Agriculture engineering.
+                <div class="accordion-item border" style="border-color: #6894A7;">
+                    <p class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="border-color: #6894A7; color: #6894A7;">
+                            <strong>Which engineering is highest paid in Australia?</strong>
+                        </button>
+                    </p>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            There are multiple engineering jobs that are highest paid in Australia, some of them are Civil engineering, Mechanical engineering, Biomedical engineering, Computer engineering, Aerospace engineering, and Agriculture engineering.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item border" style="border-color: #6894A7;">
-                <p class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="border-color: #6894A7; color: #6894A7;">
-                        <strong>Can a foreign engineer work in Australia?</strong>
-                    </button>
-                </p>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Yes, Engineers from any country can work in Australia, but you need to fulfill all the requirements to work in Australia.
+                <div class="accordion-item border" style="border-color: #6894A7;">
+                    <p class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="border-color: #6894A7; color: #6894A7;">
+                            <strong>Can a foreign engineer work in Australia?</strong>
+                        </button>
+                    </p>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, Engineers from any country can work in Australia, but you need to fulfill all the requirements to work in Australia.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 <style>
