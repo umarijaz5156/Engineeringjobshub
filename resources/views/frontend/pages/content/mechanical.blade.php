@@ -21,7 +21,7 @@ Latest Mechanical Engineering Jobs in Australia, Engineering Jobs Hub
         <div class="container">
             <div class="tw-flex tw-justify-center tw-items-center tw-relative tw-z-50">
                 <div class="tw-max-w-3xl tw-text-white tw-text-center">
-                    <h1 class="tw-text-white">{!! __('Latest Mechanical Engineering Jobs in Australia') !!}</h1>
+                    <h1 class="tw-text-white">{!! __('Mechanical Engineering Jobs in Australia') !!}</h1>
                     <p>{{ __('job_seekers_stats') }}</p>
                     <form action="{{ route('website.job') }}" method="GET" id="job_search_form">
                         <div class="jobsearchBox d-flex flex-column flex-md-row bg-gray-10 input-transparent rt-mb-24"
@@ -130,9 +130,9 @@ Latest Mechanical Engineering Jobs in Australia, Engineering Jobs Hub
 
     <section class="bg-light rounded shadow-sm md:tw-py-20 tw-py-12">
         <div class="container ">
-            <div class="text-center">
+            {{-- <div class="text-center">
                 <h1>Mechanical Engineering Jobs in Australia</h1>
-            </div>
+            </div> --}}
             <div class="tw-mt-8 tw-relative tw-z-50">
                  <div class="row justify-content-center">
                     <div class="col-md-12 ">
