@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Modules\Seo\Entities\Seo;
 use App\Http\Controllers\Api\CompanyController as ApiCompanyController;
+use App\Http\Controllers\website\pagecontroller as WebsitePagecontroller;
 
 // Route::get('/test', function () {
 //     Seo::query()->delete();
@@ -110,6 +111,15 @@ use App\Http\Controllers\Api\CompanyController as ApiCompanyController;
 //     return Seo::all();
 // });
 
+
+Route::controller(WebsitePagecontroller::class)->name('paes.')->group(function () {
+   
+    Route::get('/mechanical-engineering-jobs', 'mechanical')->name('mechanical');
+    Route::get('/civil-engineering-jobs', 'civil')->name('civil');
+
+
+
+});
 
 // =====================================================================
 // =============================Authentication Routes===================
