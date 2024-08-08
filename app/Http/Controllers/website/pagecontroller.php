@@ -45,4 +45,18 @@ class pagecontroller extends Controller
             return back();
         }
     }
+
+    public function electrical(){
+        try {
+            $data = (new IndexPageService())->execute();
+            $data['electrical'] = Job::where('title', 'like', '%electrical%')->take(8)->get();
+            return view('frontend.pages.content.electrical', $data);
+
+        } catch (\Exception $e) {
+            flashError('An error occurred: '.$e->getMessage());
+
+            return back();
+        }
+    }
+
 }
